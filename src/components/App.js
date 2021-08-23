@@ -1,5 +1,6 @@
 import React from "react";
 import NewRow from "./Row";
+import Table from "./Table"
 import store, { pickColor, addRow, changeColor } from "../store";
 
 export default class App extends React.Component {
@@ -49,9 +50,7 @@ export default class App extends React.Component {
             <option value="brown">Brown</option>
           </select>
         </div>
-        <table>
-          <NewRow grid={this.state.grid} handleColorize={this.handleColorize} />
-        </table>
+        <Table grid={this.state.grid} handleColorize={this.handleColorize}/>
       </React.Fragment>
     );
   }
